@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TUGAS AKHIR </title>
+</head>
+<style>
+	#one{
+		text-align: center;
+		color: white;
+		background-color	: #2F4F4F;
+	}
+	body {
+		background-color: #ADD8E6;
+	}
+	form{
+		text-align: center;
+	}
+	#two{
+		width 				: 100%;
+		height				: 25px;
+		margin-top			: 9px;
+		padding-top			: 20;
+		color				: black;
+		font-size			: 10pt;
+		text-align			: center;
+		position			: relative;
+		clear				: both;
+	}
+	#three{
+		text-align: center;
+		color: black;
+	}
+</style>
+<body>
+	<body>
+	<h1 id="one"> Solving Quadratic Equations  </h1> 
+	<!--Tampilkan bentuk persamaan kuadrat 
+		ax2+bx+c=0 -->
+	<h4 id ="three"> ax<sup>2</sup> + bx + c = 0 </h4>
+<form>
+	<label> a : </label>
+	<input type= "text" id = "a"/><br>
+	<label> b : </label>
+	<input type= "text" id = "b"/><br>
+	<label> c : </label>
+	<input type= "text" id = "c"/><br>
+	<input type = "button" value=   "Hasil" onClick="akar_kuadrat()">
+
+</form>
+<!---Menampilkan copyright menggunakan css Trisena wulandari& Tri wahyuni suryandari--->
+<div id ="two"> by Tri Wahyuni Suryandari & Trisena Wulandari </div>
+<script type="text/javascript">
+	function akar_kuadrat(){
+		var a,b,c,D,x1,x2;
+		a = document.getElementById("a").value;
+		b = document.getElementById("b").value;
+		c = document.getElementById("c").value;
+
+		D = (b*b)-(4*a*c);
+
+			if(D < 0){
+				window.alert("Tidak ada akarnya (imajiner): ");
+				document.write("Nilai determinan = ",D,"<br>");
+
+  			}
+  			else if (D== 0){
+  				 
+  				x1=x2= -b/ (2*a);
+  				document.write("Persamaan Kuadart : ",x1);
+  				document.write("Persamaan Kuadrat : ",x2);
+  				document.write("Nilai determinan = ",D,"<br>");
+  			}
+  			else if (D > 0){
+  				x1 = (-b + Math.sqrt(D))/ (2*a);
+  				x2 = (-b - Math.sqrt(D))/ (2*a);
+
+  				document.write("Nilai x1 : ",x1,"<br>");
+  				document.write("Nilai x2 : ",x2,"<br>");
+  				document.write("Nilai Determinan = ",D,"<br>");
+  				window.alert("Ada akar nya");
+  			}
+			
+		}
+
+</script>
+</body>
+</html>
